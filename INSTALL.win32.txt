@@ -1,0 +1,74 @@
+OSCATS: Open-Source Computerized Adaptive Testing System
+--------------------------------------------------------
+
+OSCATS facilitates the development of computerized adaptive tests and
+simulations of computerized adaptive tests.  It consists of a library
+written in object-oriented C using the GObject framework, along with
+bindings to Python, Perl, PHP, and Java.
+
+http://oscats.googlecode.com/
+
+
+Dependencies
+------------
+
+OSCATS depends on the following packages:
+
+- GNU Scientific Library (http://www.gnu.org/software/gsl)
+- Glib 2, including GObject (http://www.gtk.org)
+
+- pkg-config, optional (http://pkg-config.freedesktop.org/wiki/)
+- PyGObject module, for Python bindings (http://live.gnome.org/PyGObject)
+- Perl Glib module, for Perl bindings (http://gtk2-perl.sourceforge.net)
+- PHP-GTK extension, for PHP bindings (http://gtk.php.net)
+
+
+Windows Binary Installation
+---------------------------
+
+The liboscats-0.dll file in C\bin is required for all bindings.  The
+directory in which it is installed must be included in the system path.
+
+For compiling with the C library:
+- Place the content of the C directory in the location of your choice
+  (e.g. C:\oscats).
+- Add the bin directory to your system path (e.g. C:\oscats\bin).
+- Add the lib\pkgconfig directory to the PKG_CONFIG_PATH variable
+  (e.g. C:\oscats\lib\pkgconfig).
+
+For the Python bindings:
+- Note: This package is compiled for Python 2.7.
+- Place the oscats.pyd from Python27 in your Python's site-packages directory
+  (e.g. C:\Python27\Lib\site-packages).
+- Alternatively, you may specify the location of oscats.pyd in PYTHONPATH.
+
+For the Perl bindings:
+- Place the contents of the Perl directory in your Perl's site\lib directory
+  (e.g. C:\Perl5\site\lib).
+- Alternatively, you may specify an alternative location with the -i switch.
+
+For the PHP bindings:
+- Place the php_oscats.dll file in your PHP extensions directory
+  (e.g. C:\php5\ext).
+- Load the extension with one of the following:
+  - Add to php.ini: extension = php_oscats.dll
+  - On the command line: -Dextension=php_oscats.dll
+  - Dynamically in PHP code (see examples)
+
+For the Java bindings:
+- Place the contents of the Java directory in the location of your choice
+  (e.g. C:\oscats\java).
+- Add that directory to your system path.
+- Be sure to include the directory in your Java classpath.
+
+For use of Java in Matlab:
+- Add the location of the lib*jni-0.dll files (from Java bindings
+  installation) to Matlab's toolbox\local\librarypath.txt file.
+- Add the glib.jar and oscats.jar files to the Java classpath with the
+  javaaddpath Matlab function.
+
+
+Problems, Questions, Suggestions?
+---------------------------------
+
+Join the OSCATS discussion at http://groups.google.com/group/oscats!
